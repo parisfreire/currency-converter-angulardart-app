@@ -1,0 +1,24 @@
+<material-tab-panel>
+        <material-tab label="Currency Converter AngularDart App">
+                <div>
+                        1 &nbsp;
+                    
+                        <material-dropdown-select
+                            [options]="baseList"
+                            [selection]="singleSelectModel"
+                            buttonText="{{selectedBase}}"
+                            selectionChange="$event">
+                        </material-dropdown-select>
+                    
+                        = {{ getSelectedRateValue() }} &nbsp;
+                    
+                        <material-dropdown-select
+                            [options]="currency?.rates?.keys?.toList()"
+                            [(selection)]="selectedRateName"
+                            buttonText="{{selectedRateName}}">
+                                
+                        </material-dropdown-select>
+                    </div>
+        </material-tab>
+        
+</material-tab-panel>
